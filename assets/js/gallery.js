@@ -24,9 +24,11 @@ $(document).ready(function () {
             animateThumb: false,
             dynamic: true,
             dynamicEl: [
-                { src: 'assets/images/gallerygraphics/Grafsection/graf1.gif', thumb: 'assets/images/gallerygraphics/Grafsection/graf1.gif', subHtml: 'Gotowy projekt postaci i jej pojedyczna animacja biegu' },
-                { src: 'assets/images/gallerygraphics/Grafsection/graf2.png', thumb: 'assets/images/gallerygraphics/Grafsection/graf2.png', subHtml: 'Program Aseprite, w którym wykonuje grafiki i animacje 2D' },
-                { src: 'assets/images/gallerygraphics/Grafsection/graf3.png', thumb: 'assets/images/gallerygraphics/Grafsection/graf3.png', subHtml: 'Tło do menu gry "Rumun The Game". (μElektra2022)'},
+                { src: 'assets/images/gallerygraphics/Grafsection/graf1.png', thumb: 'assets/images/gallerygraphics/Grafsection/graf1.png', subHtml: 'Główna część strony sklepu' },
+                { src: 'assets/images/gallerygraphics/Grafsection/graf2.png', thumb: 'assets/images/gallerygraphics/Grafsection/graf2.png', subHtml: 'Sekcja do wybierania rozmiaru ilości itd. danego produktu' },
+                { src: 'assets/images/gallerygraphics/Grafsection/graf3.png', thumb: 'assets/images/gallerygraphics/Grafsection/graf3.png', subHtml: 'Panel użytkownika' },
+                { src: 'assets/images/gallerygraphics/Grafsection/graf4.png', thumb: 'assets/images/gallerygraphics/Grafsection/graf4.png', subHtml: 'Sekcja zmiany hasła w panelu użytkownika' },
+                { src: 'assets/images/gallerygraphics/Grafsection/graf5.png', thumb: 'assets/images/gallerygraphics/Grafsection/graf5.png', subHtml: 'Sekcja koszyka'},
             ]
         });
     });
@@ -39,9 +41,11 @@ $(document).ready(function () {
             animateThumb: false,
             dynamic: true,
             dynamicEl: [
-                { src: 'assets/images/gallerygraphics/Konkurssection/konkurs1.png', thumb: 'assets/images/gallerygraphics/Konkurssection/konkurs1.png', subHtml: 'Wstępny wygląd gry' },
-                { src: 'assets/images/gallerygraphics/Konkurssection/konkurs2.gif', thumb: 'assets/images/gallerygraphics/Konkurssection/konkurs2.gif', subHtml: 'Beta chodzenia postaci' },
-                { src: 'assets/images/gallerygraphics/Konkurssection/konkurs3.gif', thumb: 'assets/images/gallerygraphics/Konkurssection/konkurs3.gif', subHtml: 'Beta ataków podstawowych gracza'},
+                { src: 'assets/images/gallerygraphics/Konkurssection/graf1.png', thumb: 'assets/images/gallerygraphics/Konkurssection/graf1.png', subHtml: 'Ekran blokady telefonu' },
+                { src: 'assets/images/gallerygraphics/Konkurssection/graf2.png', thumb: 'assets/images/gallerygraphics/Konkurssection/graf2.png', subHtml: 'Menu / Pulpit telefonu' },
+                { src: 'assets/images/gallerygraphics/Konkurssection/graf3.png', thumb: 'assets/images/gallerygraphics/Konkurssection/graf3.png', subHtml: 'Działający kalkulator'},
+                { src: 'assets/images/gallerygraphics/Konkurssection/graf4.gif', thumb: 'assets/images/gallerygraphics/Konkurssection/graf4.gif', subHtml: 'Nagranie pokazujące działanie telefonu'},
+                { src: 'assets/images/gallerygraphics/Konkurssection/graf5.gif', thumb: 'assets/images/gallerygraphics/Konkurssection/graf5.gif', subHtml: 'Nagranie pokazujące działanie telefonu'},
             ]
         });
     });

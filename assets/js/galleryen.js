@@ -24,10 +24,13 @@ $(document).ready(function () {
             animateThumb: false,
             dynamic: true,
             dynamicEl: [
-                { src: 'assets/images/gallerygraphics/Grafsection/graf1.gif', thumb: 'assets/images/gallerygraphics/Grafsection/graf1.gif', subHtml: 'The finished character design and single running animation' },
-                { src: 'assets/images/gallerygraphics/Grafsection/graf2.png', thumb: 'assets/images/gallerygraphics/Grafsection/graf2.png', subHtml: 'Aseprite program, in which I create 2D graphics and animations' },
-                { src: 'assets/images/gallerygraphics/Grafsection/graf3.png', thumb: 'assets/images/gallerygraphics/Grafsection/graf3.png', subHtml: 'background for the game menu "Rumun The Game.". (μElektra2022)'},
-            ]
+                    { src: 'assets/images/gallerygraphics/Grafsection/graf1.png', thumb: 'assets/images/gallerygraphics/Grafsection/graf1.png', subHtml: 'Main section of the store page' },
+                    { src: 'assets/images/gallerygraphics/Grafsection/graf2.png', thumb: 'assets/images/gallerygraphics/Grafsection/graf2.png', subHtml: 'Section for selecting the size, quantity, etc. of a given product' },
+                    { src: 'assets/images/gallerygraphics/Grafsection/graf3.png', thumb: 'assets/images/gallerygraphics/Grafsection/graf3.png', subHtml: 'User panel' },
+                    { src: 'assets/images/gallerygraphics/Grafsection/graf4.png', thumb: 'assets/images/gallerygraphics/Grafsection/graf4.png', subHtml: 'Password change section in the user panel' },
+                    { src: 'assets/images/gallerygraphics/Grafsection/graf5.png', thumb: 'assets/images/gallerygraphics/Grafsection/graf5.png', subHtml: 'Cart section' },
+                ]
+                
         });
     });
 });
@@ -39,9 +42,11 @@ $(document).ready(function () {
             animateThumb: false,
             dynamic: true,
             dynamicEl: [
-                { src: 'assets/images/gallerygraphics/Konkurssection/konkurs1.png', thumb: 'assets/images/gallerygraphics/Konkurssection/konkurs1.png', subHtml: 'Initial look of the game' },
-                { src: 'assets/images/gallerygraphics/Konkurssection/konkurs2.gif', thumb: 'assets/images/gallerygraphics/Konkurssection/konkurs2.gif', subHtml: 'Character walking beta' },
-                { src: 'assets/images/gallerygraphics/Konkurssection/konkurs3.gif', thumb: 'assets/images/gallerygraphics/Konkurssection/konkurs3.gif', subHtml: 'Player Basic Attacks Beta'},
+                { src: 'assets/images/gallerygraphics/Konkurssection/graf1.png', thumb: 'assets/images/gallerygraphics/Konkurssection/graf1.png', subHtml: 'Phone lock screen' },
+                { src: 'assets/images/gallerygraphics/Konkurssection/graf2.png', thumb: 'assets/images/gallerygraphics/Konkurssection/graf2.png', subHtml: 'Phone menu / home screen' },
+                { src: 'assets/images/gallerygraphics/Konkurssection/graf3.png', thumb: 'assets/images/gallerygraphics/Konkurssection/graf3.png', subHtml: 'Working calculator' },
+                { src: 'assets/images/gallerygraphics/Konkurssection/graf4.gif', thumb: 'assets/images/gallerygraphics/Konkurssection/graf4.gif', subHtml: 'Recording showing the phone in action' },
+                { src: 'assets/images/gallerygraphics/Konkurssection/graf5.gif', thumb: 'assets/images/gallerygraphics/Konkurssection/graf5.gif', subHtml: 'Recording showing the phone in action' },
             ]
         });
     });
