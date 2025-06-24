@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+    --color-purple: rgb(182, 72, 245);
+    --color-purple-darker: rgb(126, 48, 172);
+    --color-purple-darker-darker: rgb(83, 30, 114);
+    --color-purple-transparent: rgba(182, 72, 245, 0.5);
+    --color-grey-transparent: rgba(230, 230, 230, 0.5);
+    --color-grey: #d1d0d0;
+    --color-text-grey: #656565;
+} 
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins";
+    text-decoration: none;
+    list-style-type: none;
+}
+.top-section{
+    width: 100%;
+    background-image: url('../images/portfolio-background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 50px;
+}
+section:not(#banner-section) {
+    background-color: #ffffff;
+}
+.container{
+    width: 100%;
+    max-width: 1500px;
+    height: 100%;
+    padding: 0 50px;
+}
+
+.section-heading{
+    font-size: 50px;
+}
+.first-heading{
+    padding-bottom: 0;
+}
+.to-top {
+    background-color: var(--color-purple);
+    z-index: 10000;
+    position: fixed;
+    bottom: 16px;
+    right: 18px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+  }
+.to-top.active{
+    bottom: 18px;
+    pointer-events: auto;
+    opacity: 1;
+}
+.to-top:hover{
+    background-color: var(--color-purple-darker);
+}
+@media (max-width: 550px){
+    .section-heading{
+        font-size: 40px;
+    }
+}
+@media (max-width: 400px){
+    .section-heading{
+        font-size: 30px;
+    }
+}
+@media (max-width: 380px){
+    .container{
+        padding: 0 30px;
+    }
+}
