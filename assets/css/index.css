@@ -20,8 +20,8 @@ html{
     scroll-behavior: smooth;
     font-family: "Poppins";
     text-decoration: none;
-    list-style-type: none;
 }
+
 .top-section{
     width: 100%;
     background-image: url('../images/portfolio-background.png');
@@ -50,6 +50,21 @@ section:not(#banner-section) {
 }
 .first-heading{
     padding-bottom: 0;
+}
+.dashed-top-text{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.dashed-top-text p{
+    text-transform: uppercase;
+    font-size: 15px;
+    color: var(--color-grey);
+}
+.dashed-line{
+    width: 60px;
+    height: 0px;
+    border: 1px dashed var(--color-purple);
 }
 .to-top {
     background-color: var(--color-purple);

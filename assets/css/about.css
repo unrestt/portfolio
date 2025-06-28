@@ -1,6 +1,7 @@
 #about-section{
     padding-top: 50px;
 }
+
 #about-section .container{
     display: flex;
     justify-content: space-around;

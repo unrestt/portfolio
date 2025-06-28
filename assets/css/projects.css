@@ -20,10 +20,53 @@
 
 .swiper-slide img {
     display: block;
-    width: 100%;
-    height: 100%;
+    height: 300px;
     object-fit: cover;
     border-radius: 10px;
+    cursor: pointer;
+}
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 300px;
+}
+
+.image-wrapper img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.image-wrapper:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.5);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-wrapper:hover .overlay {
+    opacity: 1;
+}
+
+.overlay i {
+    font-size: 40px;
+    color: white;
+}
+.bottom-project-text {
+    flex-grow: 1;
+    overflow: hidden;
 }
 
 .swiper-slide {
@@ -42,27 +85,30 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 10px 0 10px;
+    align-items: center;
 }
-.top-project-text button{
+.top-project-text a{
     border: none;
     border-radius: 15px;
     padding: 10px 20px;
-    background-color: #fff;
+    background-color: var(--color-purple);
     transition: 0.3s;
     cursor: pointer;
+    color: #000;
+    white-space: nowrap;
 }
-.top-project-text button:hover{
-    background-color: var(--color-purple);
-}
-.top-project-text button:active{
+.top-project-text a:hover{
     background-color: var(--color-purple-darker);
 }
 .top-project-text h3{
     font-size: 25px;
+    text-align: left;
 }
 .bottom-project-text{
     text-align: left;
     padding: 10px;
+    height: 150px;
+    overflow:auto;
 }
 .bottom-project-text p{
     color: var(--color-grey);
@@ -70,14 +116,36 @@
 .swiper-pagination-bullet{
     background-color: var(--color-purple) !important;
 }
+.bottom-projects-info{
+    padding-top: 20px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+.bottom-projects-info a{
+    color: var(--color-purple);
+    font-weight: bold;
+}
+.bottom-projects-info a:hover{
+    text-decoration: underline;
+}
 @media (max-width: 1300px){
     .top-project-text{
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
     }
+    .bottom-project-text{
+        margin-top: 20px;
+        height: 200px;
+    }
     .top-project-text button{
         width: 100px;
+    }
+}
+@media (max-width: 1024px){
+    .bottom-project-text{
+        height: 150px;
     }
 }
 @media (max-width: 500px){

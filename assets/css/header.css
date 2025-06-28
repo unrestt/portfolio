@@ -9,9 +9,9 @@ header .container{
     justify-content: space-around;
     align-items: center;
 }
-/* wyjeb to ------------------------- */
-header h1{
-    color: #fff;
+#img-header-link{
+    display: flex;
+    align-items: center;
 }
 header img{
     width: 57px;
@@ -141,6 +141,11 @@ nav a:hover{
     }
 }
 @media (max-width: 1060px) {
+    header [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
     header .container{
         justify-content: space-between;
         padding: 0 50px;
