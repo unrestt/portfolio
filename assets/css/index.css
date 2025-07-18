@@ -24,7 +24,7 @@ html{
 
 .top-section{
     width: 100%;
-    background-image: url('../images/portfolio-background.png');
+    background-image: url('../images/portfolio-background.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -84,7 +84,7 @@ section:not(#banner-section) {
     opacity: 0;
     pointer-events: none;
     transition: all .4s;
-}
+  }
 .to-top.active{
     bottom: 18px;
     pointer-events: auto;
