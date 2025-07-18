@@ -84,7 +84,7 @@ section:not(#banner-section) {
     opacity: 0;
     pointer-events: none;
     transition: all .4s;
-  }
+}
 .to-top.active{
     bottom: 18px;
     pointer-events: auto;
