@@ -10,6 +10,9 @@
     gap: 50px;
     justify-content: center;
 }
+.fade-up{
+    display: flex;
+}
 .serv{
     max-width: 400px;
     background-color: #FAFCFE;

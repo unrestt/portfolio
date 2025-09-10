@@ -47,19 +47,37 @@
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
 }
 .skill:hover {
-  transform: scale(1.05);
-  background-color: var(--color-purple-darker);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  cursor: pointer;
+    transform: scale(1.05);
+    background-color: var(--color-purple-darker);
+    cursor: pointer;
 }
 .skill i{
     font-size: 30px;
     color: white
 }
+.skill-adon{
+    position: absolute;
+    top: -55px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    font-weight: bold;
+    color: var(--color-purple);
+    border-radius: 10px;
+    transform: translateY(10px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+.skill:hover .skill-adon{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
 @media (max-width: 1300px){
     #about-section .container{
         flex-direction: column-reverse;
