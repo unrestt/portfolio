@@ -1,163 +1,117 @@
-#projects-section{
-    background-image: url('../images/background.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+#projects-section {
+  padding-top: 50px;
 }
-#projects-section .container{
-    padding-top: 50px;
+#projects-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-#projects-section .section-heading{
-    color: #fff;
+.project {
+  position: relative;
+  max-width: 430px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 30px 0 30px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: rgba(201, 201, 201, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-.swiper {
-    width: 100%;
-    height: 100%;
-    padding-bottom: 50px !important;
-    padding-top: 20px !important;
-}
-
-.swiper-slide img {
-    display: block;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.image-wrapper {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    height: 300px;
-}
-
-.image-wrapper img {
-    width: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease, filter 0.5s ease;
-}
-
-.image-wrapper:hover img {
-    transform: scale(1.1);
-    filter: brightness(0.5);
-}
-
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  background: linear-gradient(to top, rgba(83, 30, 114,0.6), rgba(0,0,0,0));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+.overlay p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+.project:hover .overlay {
+  opacity: 1;
+}
+.project-text {
+  max-width: 350px;
 }
 
-.image-wrapper:hover .overlay {
-    opacity: 1;
+.project img {
+  width: 100%;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
 }
 
-.overlay i {
-    font-size: 40px;
-    color: white;
-}
-.bottom-project-text {
-    flex-grow: 1;
-    overflow: hidden;
+.project:hover img {
+  transform: scale(1.05);
 }
 
-.swiper-slide {
-    display: flex !important;
-    flex-direction: column;
-    width: 400px;
-    border-radius: 15px;
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px) !important;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center;
-    color: #fff;
+.project-text {
+  margin-top: 15px;
+  transition: color 0.3s ease;
 }
-.top-project-text{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 10px 0 10px;
-    align-items: center;
+
+.project h3 {
+  color: var(--color-purple);
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
-.top-project-text a{
-    border: none;
-    border-radius: 15px;
-    padding: 10px 20px;
-    background-color: var(--color-purple);
-    transition: 0.3s;
-    cursor: pointer;
-    color: #000;
-    white-space: nowrap;
+.projects-container {
+  display: flex;
+  flex-direction: column;
 }
-.top-project-text a:hover{
-    background-color: var(--color-purple-darker);
+.row-project {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  gap: 50px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
 }
-.top-project-text h3{
-    font-size: 25px;
-    text-align: left;
+.row-project.show {
+  opacity: 1;
+  margin-top: 50px;
 }
-.bottom-project-text{
-    text-align: left;
-    padding: 10px;
-    height: 150px;
-    overflow:auto;
+.row-project:first-child {
+  max-height: none;
+  opacity: 1;
 }
-.bottom-project-text p{
-    color: var(--color-grey);
+#down-project {
+  display: flex;
+  align-self: center;
+  width: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
-.swiper-pagination-bullet{
-    background-color: var(--color-purple) !important;
+#down-project i {
+  font-size: 40px;
+  color: var(--color-purple);
+  transition: 0.3s;
 }
-.bottom-projects-info{
-    padding-top: 20px;
-    color: #fff;
-    width: 100%;
-    text-align: center;
+#down-project:hover {
+  transform: translateY(5px);
 }
-.bottom-projects-info a{
-    color: var(--color-purple);
-    font-weight: bold;
+#down-project:hover i {
+  color: var(--color-purple-darker-darker);
 }
-.bottom-projects-info a:hover{
-    text-decoration: underline;
-}
-@media (max-width: 1300px){
-    .top-project-text{
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-    .bottom-project-text{
-        margin-top: 20px;
-        height: 200px;
-    }
-    .top-project-text button{
-        width: 100px;
-    }
-}
-@media (max-width: 1024px){
-    .bottom-project-text{
-        height: 150px;
-    }
-}
-@media (max-width: 500px){
-    .bottom-project-text{
-        font-size: 15px;
-    }
-}
-@media (max-width: 450px){
-    .top-project-text h3{
-        font-size: 20px;
-    }
-    .top-project-text button{
-        width: 100%;
-    }
+#down-project.all-shown i {
+  transform: rotateX(180deg);
 }
