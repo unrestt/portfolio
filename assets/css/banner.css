@@ -15,7 +15,14 @@
 }
 .banner-links-container{
     display: flex;
-    gap: 30px;
+    column-gap: 30px;
+    flex-wrap: wrap;
+}
+.banner-links-container a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 .banner-bottom-text a:nth-child(2){
     border-color: #fff;

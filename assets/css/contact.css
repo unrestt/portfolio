@@ -30,9 +30,9 @@
     width: 100%;
 }
 
-.contact-info {
+/* .contact-info {
     text-align: center;
-}
+} */
 
 .contact-info p span {
     color: var(--color-purple);

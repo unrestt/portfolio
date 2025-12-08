@@ -363,39 +363,51 @@
             <h2 class="section-heading" data-aos="fade" data-aos-duration="1200" data-aos-delay="300">Kontakt</h2>
             <div class="contact-container">
                 <div class="left-contact" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
-                    <form method="POST">
+                    <form method="POST" id="contactForm" novalidate>
                         <input type="hidden" name="action" value="contact">
+
                         <label for="imie">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" placeholder="Twoje imię" name="imie" id="imie">
+                            <input type="text" placeholder="Twoje imię" name="imie" id="imie" required minlength="2"
+                                maxlength="40" pattern="^[A-Za-zÀ-žżźćńółśąęŻŹĆĄŚĘŁÓŃ\s-]+$">
                         </label>
+
                         <label for="nazwisko">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" placeholder="Twoje nazwisko" name="nazwisko" id="nazwisko">
+                            <input type="text" placeholder="Twoje nazwisko" name="nazwisko" id="nazwisko" required
+                                minlength="2" maxlength="60" pattern="^[A-Za-zÀ-žżźćńółśąęŻŹĆĄŚĘŁÓŃ\s-]+$">
                         </label>
+
                         <label for="email">
                             <i class="fa-solid fa-envelope"></i>
-                            <input type="email" placeholder="Twój E-mail" name="email" id="email">
+                            <input type="email" placeholder="Twój E-mail" name="email" id="email" required
+                                maxlength="100">
                         </label>
+
                         <label for="tel">
                             <i class="fa-solid fa-phone"></i>
-                            <input type="tel" placeholder="Twój numer telefonu" name="numer_tel" id="tel">
+                            <input type="tel" placeholder="Twój numer telefonu" name="numer_tel" id="tel" required
+                                pattern="^[0-9\-\+\s]{7,20}$">
                         </label>
+
                         <div class="textarea-wrapper">
                             <i class="fa-solid fa-comment"></i>
-                            <textarea placeholder="Twoja wiadomość..." name="wiadomosc"></textarea>
+                            <textarea placeholder="Twoja wiadomość..." name="wiadomosc" required minlength="10"
+                                maxlength="1000"></textarea>
                         </div>
+
                         <div class="checkbox-container">
                             <label for="checkbox" id="checkboxLabel">
-                                <input type="checkbox" id="checkbox">
-                                <p>Wyrażam zgodę na przetwarzanie moich danych osobowych w celu obsługi formularza
-                                    zgodnie z
+                                <input type="checkbox" id="checkbox" required>
+                                <p>Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z
                                     <a href="polityka-prywatnosci.html">Polityką Prywatności</a>
                                 </p>
                             </label>
                         </div>
+
                         <button type="submit">Wyślij wiadomość</button>
                     </form>
+
                 </div>
                 <div class="right-contact" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000">
                     <div class="contact-info">
