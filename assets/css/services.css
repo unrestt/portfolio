@@ -1,45 +1,118 @@
-#services-section{
-    padding-top: 50px;
-    background-color: #fAfAfA !important;
+#services-section {
+    padding-top: 80px;
     padding-bottom: 100px;
+    background-color: #f8f9fa;
+    /* Subtle light background */
+    position: relative;
+    overflow: hidden;
 }
-.services{
-    margin-top: 30px;
+
+/* Optional: Background decoration */
+#services-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(182, 72, 245, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.services {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.fade-up {
+    display: block;
+    /* Ensure grid item behavior works */
+    height: 100%;
+}
+
+.serv {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 100%;
     display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Left align content */
+    text-align: left;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    position: relative;
+    overflow: hidden;
 }
-.fade-up{
-    display: flex;
-}
-.serv{
-    max-width: 400px;
-    background-color: #FAFCFE;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding: 30px;
-    border-radius: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+
+/* Hover Effect */
 .serv:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 4px 4px rgba(126, 48, 172, 0.5);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(182, 72, 245, 0.15);
+    border-color: rgba(182, 72, 245, 0.1);
 }
-.serv p{
-    color: var(--color-text-grey);
-    font-weight: 300;
+
+.serv:hover .icon-box {
+    background: var(--color-purple);
+    transform: scale(1.1) rotate(3deg);
 }
-.serv h4{
-    padding-bottom: 10px;
-    font-size: 17px;
+
+.serv:hover .icon-box i {
+    color: #ffffff;
 }
-.serv i{
+
+/* Icon Styling */
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: rgba(182, 72, 245, 0.08);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+
+.icon-box i {
+    font-size: 26px;
     color: var(--color-purple);
-    font-size: 45px;
-    padding-bottom: 25px;
+    transition: color 0.3s ease;
 }
-@media (max-width: 500px){
-    .serv p{
-        font-size: 15px;
+
+/* Typography */
+.serv h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #2c3e50;
+    letter-spacing: -0.5px;
+}
+
+.serv p {
+    font-size: 15px;
+    color: #6c757d;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Responsive Adjusments */
+@media (max-width: 768px) {
+    .services {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .serv {
+        padding: 30px 25px;
     }
 }
