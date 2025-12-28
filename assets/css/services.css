@@ -40,7 +40,7 @@
     background: #ffffff;
     padding: 40px 30px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.03);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     height: 100%;
     display: flex;
@@ -56,7 +56,7 @@
 /* Hover Effect */
 .serv:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(182, 72, 245, 0.15);
+    box-shadow: 0 20px 10px rgba(182, 72, 245, 0.15);
     border-color: rgba(182, 72, 245, 0.1);
 }
 
