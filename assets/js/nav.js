@@ -27,12 +27,14 @@ function openMenu() {
     menu.classList.add('active');
     hamburger.classList.add('open');
     document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    document.documentElement.style.overflow = 'hidden'; // Prevent scrolling on html element too
 }
 
 function closeMenu() {
     menu.classList.remove('active');
     hamburger.classList.remove('open');
     document.body.style.overflow = ''; // Restore scrolling
+    document.documentElement.style.overflow = ''; // Restore scrolling
 }
 
 // Close menu when a link is clicked
