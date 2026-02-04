@@ -6,6 +6,10 @@ header {
     margin-top: 50px;
 }
 
+#privacypolicy-section h2.section-heading {
+    padding-top: 50px;
+}
+
 .points {
     display: flex;
     flex-direction: column;

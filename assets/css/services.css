@@ -1,7 +1,8 @@
 #services-section {
+    scroll-margin-top: 80px;
     padding-top: 80px;
     padding-bottom: 100px;
-    background-color: #f8f9fa;
+    background-color: #fAfAfA !important;
     /* Subtle light background */
     position: relative;
     overflow: hidden;
