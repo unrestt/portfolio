@@ -50,8 +50,10 @@ class Particle {
     draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+        ctx.globalAlpha = 0.4; // constant low opacity for particles
         ctx.fillStyle = this.color;
         ctx.fill();
+        ctx.globalAlpha = 1.0; // reset for lines
     }
 
     // Check particle position, check mouse interaction, move particle, draw particle
@@ -104,7 +106,7 @@ function connect() {
 
             // Link particles to each other
             if (distance < (canvas.width / 7) * (canvas.height / 7)) {
-                opacityValue = 1 - (distance / 20000); // fade out as distance increases
+                opacityValue = (1 - (distance / 20000)) * 0.3; // fade out as distance increases and reduced global opacity
                 ctx.strokeStyle = 'rgba(182, 72, 245,' + opacityValue + ')';
                 ctx.lineWidth = 1;
                 ctx.beginPath();
@@ -122,7 +124,7 @@ function connect() {
 
             if (distance < (mouse.radius * mouse.radius)) {
                 // stronger connection to mouse
-                opacityValue = 1 - (distance / (mouse.radius * mouse.radius));
+                opacityValue = (1 - (distance / (mouse.radius * mouse.radius))) * 0.4;
                 ctx.strokeStyle = 'rgba(182, 72, 245,' + opacityValue + ')';
                 ctx.lineWidth = 1;
                 ctx.beginPath();
