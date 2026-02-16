@@ -125,10 +125,38 @@
     font-weight: 600;
 }
 
+/* Button */
+.about-btn-container {
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.github-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    background-color: #181717;
+    /* GitHub Dark */
+    color: #fff;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.github-btn:hover {
+    background-color: var(--color-purple);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(182, 72, 245, 0.3);
+}
+
 /* Stats Grid */
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-top: 10px;
 }
@@ -244,6 +272,12 @@
     .experience-badge {
         left: -10px;
         bottom: 30px;
+    }
+}
+
+@media (max-width: 850px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
