@@ -28,7 +28,7 @@
   border: 1px solid rgba(0, 0, 0, 0.02);
 }
 
-.project:hover {  
+.project:hover {
   transform: translateY(-12px);
 }
 
@@ -122,10 +122,15 @@
 
 /* Responsiveness */
 @media (max-width: 768px) {
+  #projects-section .container {
+    padding: 0 20px;
+  }
+
   .projects-container {
     grid-template-columns: 1fr;
     /* Single column on mobile */
-    gap: 30px;
+    gap: 25px;
+    padding: 0;
   }
 
   .img-container {
