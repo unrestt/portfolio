@@ -3,14 +3,7 @@ const hamburger = document.querySelector('.hamburger');
 const menuLinks = document.querySelectorAll('#nav-ul a');
 const header = document.querySelector('header');
 
-// Sticky Header Logic
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
+
 
 // Mobile Menu Logic
 function toggleMenu() {
