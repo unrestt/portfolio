@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://unrestt.github.io/portfolio-3/sitemap.xml
