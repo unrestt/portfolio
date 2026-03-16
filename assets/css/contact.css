@@ -1,240 +1,411 @@
+/* ===========================
+   CONTACT SECTION - Premium Dark Design
+   =========================== */
+
 #contact-section {
     scroll-margin-top: 80px;
-    padding-top: 50px;
-    background-color: #fAfAfA !important;
+    padding: 100px 0;
+    background-color: #fafafa;
+    position: relative;
+    overflow: hidden;
 }
 
-.contact-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Main layout grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
     gap: 40px;
-    flex-wrap: wrap;
+    align-items: stretch;
+    margin-top: 60px;
+    position: relative;
+    z-index: 2;
 }
 
-.left-contact {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    width: 100%;
-}
-
-.right-contact {
+/* ============================
+   LEFT PANEL — Contact Info
+   ============================ */
+.contact-info-panel {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 24px;
+}
+
+.contact-intro {
+    margin-bottom: 10px;
+}
+
+.contact-intro h3 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.contact-intro p {
+    font-size: 15px;
+    color: var(--color-text-grey);
+    line-height: 1.7;
+}
+
+.contact-card {
+    display: flex;
     align-items: center;
-    gap: 40px;
-    flex: 1;
-    width: 100%;
+    gap: 18px;
+    background: #ffffff;
+    border: 1px solid rgba(182, 72, 245, 0.15);
+    border-radius: 16px;
+    padding: 22px 24px;
+    transition: all 0.35s ease;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
 }
 
-/* .contact-info {
-    text-align: center;
-} */
-
-.contact-info p span {
-    color: var(--color-purple);
-    font-weight: bold;
-    font-size: 18px;
+.contact-card:hover {
+    background: rgba(182, 72, 245, 0.05);
+    border-color: rgba(182, 72, 245, 0.45);
+    transform: translateX(6px);
+    box-shadow: 0 8px 24px rgba(182, 72, 245, 0.1);
 }
 
-.contact-info a {
-    color: #000;
+.contact-card-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(182, 72, 245, 0.3), rgba(126, 48, 172, 0.2));
+    border: 1px solid rgba(182, 72, 245, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: rgb(182, 72, 245);
+    flex-shrink: 0;
+}
+
+.contact-card-text p {
+    font-size: 12px;
+    color: var(--color-text-grey);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.contact-card-text a,
+.contact-card-text span {
+    font-size: 15px;
+    color: #1a1a1a;
+    font-weight: 500;
+    text-decoration: none;
     transition: color 0.3s;
 }
 
-.contact-info a:hover {
-    text-decoration: underline;
+.contact-card:hover .contact-card-text a,
+.contact-card:hover .contact-card-text span {
     color: var(--color-purple);
 }
 
-.right-contact img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-    padding: 0 15px;
-    box-sizing: border-box;
+/* Social row */
+.contact-socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
 }
 
-#contact-section form {
+.social-btn {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: #ffffff;
+    border: 1px solid rgba(182, 72, 245, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-grey);
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.social-btn:hover {
+    background: var(--color-purple);
+    border-color: var(--color-purple);
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* ============================
+   RIGHT PANEL — Form Card
+   ============================ */
+.contact-form-card {
+    background: #ffffff;
+    border: 1px solid rgba(182, 72, 245, 0.12);
+    border-radius: 24px;
+    padding: 50px 45px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.07);
+}
+
+.contact-form-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(182, 72, 245, 0.8), transparent);
+}
+
+.contact-form-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+}
+
+/* Form fields */
+#contactForm {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 500px;
-    margin-top: 30px;
-    padding: 0 15px;
-    box-sizing: border-box;
-}
-
-#contact-section form input:not(#checkbox),
-#contact-section form textarea {
-    padding: 10px 10px 10px 45px;
-    color: var(--color-text-grey);
-    box-sizing: border-box;
-    outline: 1px solid var(--color-purple);
-    border: none;
-}
-
-#contact-section form label,
-#contact-section form input:not(#checkbox),
-#contact-section form button,
-#contact-section form textarea {
+    gap: 0;
     width: 100%;
     max-width: 100%;
-    height: 55px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-.textarea-wrapper {
-    width: 100%;
-    position: relative;
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
 }
 
-.textarea-wrapper i {
-    position: absolute;
-    left: 12px;
-    top: 11px;
-    font-size: 20px;
-    color: var(--color-purple);
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 18px;
 }
 
-#contact-section form input:not(#checkbox):last-of-type {
-    margin-bottom: 5px;
+.form-group label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-text-grey);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    height: auto;
+    margin-bottom: 0;
+    position: static;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 0;
 }
 
-#contact-section input:not(#checkbox):hover,
-#contact-section textarea:hover,
-#contact-section input:not(#checkbox):focus,
-#contact-section textarea:focus,
-#contact-section input:not(#checkbox):active,
-#contact-section textarea:active {
-    outline-width: 2px;
-}
-
-#contact-section form button {
-    background-color: var(--color-purple);
-    cursor: pointer;
-    transition: 0.3s background-color;
-    border: none;
-}
-
-#contact-section form button:hover {
-    background-color: var(--color-purple-darker);
-}
-
-#contact-section form textarea {
-    height: 200px;
-    resize: none;
-    font-size: 14px;
-}
-
-#contact-section label {
+.input-wrapper {
     position: relative;
     display: flex;
     align-items: center;
-    width: 100%;
 }
 
-#contact-section label i {
+.input-wrapper i {
     position: absolute;
-    margin-left: 12px;
-    font-size: 18px;
-    color: var(--color-purple);
+    left: 16px;
+    font-size: 15px;
+    color: rgba(182, 72, 245, 0.6);
+    z-index: 1;
+    pointer-events: none;
 }
 
-#contact-section input#checkbox {
-    width: 20px;
-    height: 20px;
-}
-
-#checkboxLabel {
+.input-wrapper input {
+    width: 100%;
+    height: 50px;
+    background: #f7f7f7;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 0 16px 0 44px;
+    color: #1a1a1a;
     font-size: 14px;
-    color: var(--color-text-grey);
-    font-weight: 350;
-    line-height: 1.4;
+    font-family: "Poppins";
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.input-wrapper input:focus {
+    background: rgba(182, 72, 245, 0.05);
+    border-color: rgba(182, 72, 245, 0.5);
+    box-shadow: 0 0 0 3px rgba(182, 72, 245, 0.08);
+}
+
+.input-wrapper input::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.textarea-group {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.textarea-group i {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    font-size: 15px;
+    color: rgba(182, 72, 245, 0.6);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.textarea-group textarea {
+    width: 100%;
+    height: 130px;
+    background: #f7f7f7;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 14px 16px 14px 44px;
+    color: #1a1a1a;
+    font-size: 14px;
+    font-family: "Poppins";
+    resize: none;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+.textarea-group textarea:focus {
+    background: rgba(182, 72, 245, 0.05);
+    border-color: rgba(182, 72, 245, 0.5);
+    box-shadow: 0 0 0 3px rgba(182, 72, 245, 0.08);
+}
+
+.textarea-group textarea::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+/* Checkbox */
+.contact-checkbox {
     display: flex;
-    gap: 10px;
-    margin-top: 6px;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 24px;
+    cursor: pointer;
+    height: auto !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    border: none !important;
 }
 
-.checkbox-container a {
-    color: var(--color-purple);
-    font-weight: bold;
+.contact-checkbox input[type="checkbox"] {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px;
+    accent-color: rgb(182, 72, 245);
+    margin-top: 2px;
+    cursor: pointer;
 }
 
-.checkbox-container a:hover {
+.contact-checkbox p {
+    font-size: 13px;
+    color: var(--color-text-grey);
+    line-height: 1.5;
+}
+
+.contact-checkbox a {
+    color: rgb(182, 72, 245);
     text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
-@media screen and (max-width: 1240px) {
-    .contact-container {
-        flex-direction: column-reverse;
-        align-items: center;
+/* Submit button */
+.contact-submit-btn {
+    width: 100%;
+    height: 54px !important;
+    background: linear-gradient(135deg, rgb(182, 72, 245), rgb(126, 48, 172));
+    border: none;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Poppins";
+    cursor: pointer;
+    transition: all 0.35s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    letter-spacing: 0.03em;
+    margin-bottom: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-submit-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgb(200, 100, 255), rgb(150, 60, 200));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.contact-submit-btn:hover::before {
+    opacity: 1;
+}
+
+.contact-submit-btn i,
+.contact-submit-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+@media (max-width: 1100px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
     }
 
-    .right-contact {
-        padding-top: 40px;
-        max-width: 100%;
+    .contact-info-panel {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
-    .left-contact {
-        max-width: 100%;
+    .contact-intro {
+        width: 100%;
     }
 
-    .right-contact img {
-        width: auto;
+    .contact-card {
+        flex: 1;
+        min-width: 200px;
     }
 }
 
-@media screen and (max-width: 700px) and (min-width: 501px) {
-    .right-contact img {
-        max-width: 100%;
-        padding: 0 15px;
-        box-sizing: border-box;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .contact-info p {
-        font-size: 14px;
+@media (max-width: 768px) {
+    #contact-section {
+        padding: 70px 0;
     }
 
-    .contact-info span {
-        font-size: 16px !important;
-    }
-
-    #contact-section label i {
-        font-size: 16px;
-    }
-
-    .checkbox-container {
-        padding: 10px 0;
-        align-items: flex-start;
-    }
-
-    #checkboxLabel {
-        font-size: 13px;
-    }
-
-    .right-contact img {
-        max-width: 100%;
-        padding: 0 10px;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .checkbox-container {
+    .contact-info-panel {
         flex-direction: column;
-        gap: 15px;
-        padding-top: 0;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-card {
+        padding: 35px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form-card {
+        padding: 28px 20px;
     }
 }
