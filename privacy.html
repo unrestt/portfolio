@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polityka Prywatności | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            padding-top: 150px;
+            padding-bottom: 50px;
+            text-align: center;
+        }
+        .content-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding-bottom: 100px;
+        }
+        .content-section h2 {
+            margin-top: 2.5rem;
+            color: var(--color-text);
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><img src="bklogo.png" alt="DevBartek Logo" class="brand-logo"></a>
+            <nav class="nav-links" style="display: flex;">
+                <a href="index.html" class="nav-link">Wróć na stronę główną</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container fade-up">
+                <h1 class="hero-title">Polityka <span class="text-gradient">Prywatności</span></h1>
+                <p class="hero-subtitle">Ostatnia aktualizacja: Kwiecień 2026</p>
+            </div>
+        </section>
+
+        <section class="content-section fade-up delay-1">
+            <div class="container">
+                <h2>1. Gromadzenie danych</h2>
+                <p>Podczas korzystania z formularza kontaktowego na stronie zbierane są informacje takie jak Twoje imię, nazwisko, adres e-mail oraz treść wiadomości. Służą one wyłącznie w celu nawiązania z Tobą kontaktu.</p>
+
+                <h2>2. Wykorzystanie danych</h2>
+                <p>Dane, które podajesz w formularzu, nie są sprzedawane, wymieniane, ani wypożyczane stronom trzecim. Wykorzystuję je tylko do profesjonalnej komunikacji w sprawach projektów czy ofert współpracy.</p>
+
+                <h2>3. Ciasteczka (Cookies) i Analityka</h2>
+                <p>Moje portfolio korzysta z plików cookies oraz narzędzia Google Analytics w celu analizowania ruchu na stronie i poprawy komfortu użytkowania. Ciasteczka analityczne są ładowane wyłącznie po wyrażeniu przez Ciebie zgody za pomocą baneru cookies. Możesz w każdej chwili zmienić swoją decyzję, czyszcząc pliki cookies w przeglądarce.</p>
+
+                <h2>4. Przechowywanie danych</h2>
+                <p>Maile wysyłane ze strony są przechowywane na mojej poczcie na czas niezbędny do zakończenia wątku komunikacji lub ewentualnej współpracy. Na Twoje życzenie w każdej chwili mogą one zostać trwale usunięte.</p>
+
+                <h2>5. Kontakt</h2>
+                <p>Jeżeli masz jakiekolwiek pytania dotyczące tej polityki prywatności, napisz do mnie na adres podany w sekcji kontaktowej na stronie głównej.</p>
+
+                <div style="margin-top: 4rem;">
+                    <a href="index.html" class="btn btn-outline">&larr; Powrót</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; <span id="year"></span> DevBartek. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.querySelectorAll('.fade-up').forEach(el => el.classList.add('in-view'));
+    </script>
+</body>
+</html>

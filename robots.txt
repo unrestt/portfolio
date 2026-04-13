@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /private/
 
-Sitemap: https://unrestt.github.io/portfolio-3/sitemap.xml
+Sitemap: https://bartoszkutnik.pl//sitemap.xml

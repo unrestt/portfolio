@@ -4,765 +4,501 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bartosz Kutnik - Portfolio</title>
+    <title>Nowoczesne Aplikacje Webowe | Portfolio</title>
     <meta name="description"
-        content="Bartosz Kutnik - Frontend Developer. Tworzę nowoczesne, profesjonalne i wydajne strony internetowe. Sprawdź moje portfolio i realizacje.">
+        content="Portfolio Bartosz Kutnik - Front-End Developer. Specjalizacja: React, Next.js, TypeScript. Buduję szybkie i nowoczesne aplikacje webowe zorientowane na wyniki biznesowe.">
     <meta name="keywords"
-        content="Bartosz Kutnik, Frontend Developer, Tworzenie stron WWW, Strony internetowe, Web Developer, Portfolio, HTML, CSS, JavaScript">
+        content="Bartosz Kutnik, Front-End Developer, React Developer, Next.js, Portfolio, Tworzenie stron WWW, Programista, Polska">
     <meta name="author" content="Bartosz Kutnik">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://unrestt.github.io/portfolio-3/">
 
-    <!-- Open Graph (Facebook/LinkedIn) -->
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://bartoszkutnik.pl/">
+
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://unrestt.github.io/portfolio-3/">
-    <meta property="og:title" content="Bartosz Kutnik - Portfolio">
+    <meta property="og:url" content="https://bartoszkutnik.pl/">
+    <meta property="og:title" content="Bartosz Kutnik | Nowoczesne Aplikacje Webowe">
     <meta property="og:description"
-        content="Nazywam się Bartosz Kutnik i jestem Frontend Developerem. Tworzę nowoczesne strony internetowe. Zobacz moje portfolio.">
-    <meta property="og:image" content="https://unrestt.github.io/portfolio-3/assets/images/about.webp">
-    <meta property="og:locale" content="pl_PL">
+        content="Buduję szybkie i nowoczesne aplikacje webowe. Zobacz moje realizacje i zbudujmy coś niesamowitego razem!">
+    <meta property="og:image" content="/assets/bklogo.png">
 
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Bartosz Kutnik - Portfolio">
-    <meta name="twitter:description"
-        content="Nazywam się Bartosz Kutnik i jestem Frontend Developerem. Tworzę nowoczesne strony internetowe.">
-    <meta name="twitter:image" content="https://unrestt.github.io/portfolio-3/assets/images/about.webp">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://bartoszkutnik.pl/">
+    <meta property="twitter:title" content="Bartosz Kutnik | Front-End Developer Portfolio">
+    <meta property="twitter:description" content="Nowoczesny tech-stack i dbałość o detale. Sprawdź moje realizacje.">
+    <meta property="twitter:image" content="/assets/bklogo.png">
 
-    <!-- JSON-LD Schema -->
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#8b5cf6">
+
+    <!-- Structured Data: Person -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Bartosz Kutnik",
-      "jobTitle": "Frontend Developer",
-      "url": "https://unrestt.github.io/portfolio-3/",
-      "image": "https://unrestt.github.io/portfolio-3/assets/images/about.webp",
+      "jobTitle": "Front-End Developer",
+      "url": "https://bartoszkutnik.pl/",
       "sameAs": [
-        "https://github.com/Unrestt",
-        "https://www.facebook.com/bartek.kutnik.77/"
-      ]
+        "https://github.com/unrestt",
+        "https://www.linkedin.com/in/bartosz-kutnik-820a45335/"
+      ],
+      "description": "Programista Front-End z pasją do nowoczesnych technologii webowych takich jak React i Next.js."
     }
     </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Bartosz Kutnik - Portfolio",
-      "url": "https://unrestt.github.io/portfolio-3/"
-    }
-    </script>
-    <link rel="shortcut icon" href="assets/images/white_logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/banner.css">
-    <link rel="stylesheet" href="assets/css/about.css">
-    <link rel="stylesheet" href="assets/css/services.css">
-    <link rel="stylesheet" href="assets/css/projects.css">
-    <link rel="stylesheet" href="assets/css/contact.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/testimonials.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <link rel="stylesheet" href="assets/css/cookies.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/70f2470b08.js" crossorigin="anonymous"></script>
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics (Consent Mode) -->
+    <script>
+        // Define dataLayer and gtag
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+
+        // Default consent to 'denied'
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied'
+        });
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9866G3MD6S"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
-
-        // Default consent mode (denied until user accepts)
-        gtag('consent', 'default', {
-            'analytics_storage': 'denied'
-        });
-
         gtag('js', new Date());
         gtag('config', 'G-9866G3MD6S');
     </script>
 </head>
 
 <body>
-    <div class="top-section" id="home">
-        <header>
-            <div class="container">
-                <a href="index.html#home" id="img-header-link" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="assets/images/white_logo.png" alt="Bartosz Kutnik - Logo">
-                </a>
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="logo"><img src="assets/bklogo.png" alt="DevBartek Logo" class="brand-logo"></a>
 
-                <nav data-aos="fade-left" data-aos-delay="400">
-                    <div class="hamburger" onclick="toggleMenu()" data-aos="fade-up" data-aos-delay="600">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
-                    <ul id="nav-ul">
-                        <li data-aos="fade-up" data-aos-delay="800"><a href="#home">Home</a></li>
-                        <li data-aos="fade-up" data-aos-delay="900"><a href="#about-section">O mnie</a></li>
-                        <li data-aos="fade-up" data-aos-delay="1000"><a href="#services-section">Korzyści</a></li>
-                        <li data-aos="fade-up" data-aos-delay="1100"><a href="#projects-section">Projekty</a></li>
-                        <li data-aos="fade-up" data-aos-delay="1150"><a href="#testimonials-section">Opinie</a></li>
-                        <li data-aos="fade-up" data-aos-delay="1200"><a href="#contact-section">Kontakt</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <section id="banner-section">
-            <video autoplay muted loop playsinline class="hero-video">
-                <source src="assets/images/hero.mp4" type="video/mp4">
+            <button class="mobile-menu-toggle" aria-label="Otwórz menu nawigacji" aria-controls="primary-navigation"
+                aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+
+            <nav class="nav-links" id="primary-navigation">
+                <a href="#about" class="nav-link">O mnie</a>
+                <a href="#services" class="nav-link">Usługi</a>
+                <a href="#process" class="nav-link">Proces</a>
+                <a href="#portfolio" class="nav-link">Realizacje</a>
+                <a href="#contact" class="nav-link">Kontakt</a>
+                <a href="#contact" class="btn btn-primary glow-effect">Rozpocznij projekt <i
+                        class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <video class="hero-video-bg" autoplay loop muted playsinline>
+                <source src="assets/hero.mp4" type="video/mp4">
             </video>
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-container fade-up">
+                <p class="hero-badge">Dostępny do wzięcia nowych projektów</p>
+                <h1 class="hero-title">Tworzę <span class="text-gradient">Nowoczesne</span> Doświadczenia Webowe</h1>
+                <p class="hero-subtitle">4 lata doświadczenia w budowaniu responsywnych, dostępnych i niezwykle szybkich
+                    aplikacji. Przekuwam złożone pomysły w przejrzysty interfejs.</p>
+                <div class="hero-cta">
+                    <a href="#portfolio" class="btn btn-primary glow-effect">Zobacz Projekty <i
+                            class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
+                    <a href="#about" class="btn btn-secondary"><i class="fa-regular fa-user"
+                            style="margin-right: 8px;"></i> Dowiedz się więcej</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-padding">
             <div class="container">
-                <div class="dashed-top-text" data-aos="fade-zoom-in" data-aos-duration="1500" data-aos-delay="100">
-                    <div class="dashed-line"></div>
-                    <p>witaj na mojej stronie</p>
+                <div class="section-heading fade-up">
+                    <h2 class="section-title">O Mnie</h2>
+                    <div class="heading-line"></div>
                 </div>
-                <div class="banner-mid-text" data-aos="fade-zoom-in" data-aos-duration="1500" data-aos-delay="500">
-                    <h1>Bartosz Kutnik<br>
-                        <span>Frontend Developer</span>
-                    </h1>
-                </div>
-                <div class="banner-bottom-text" data-aos="fade-slide-up" data-aos-duration="1500" data-aos-delay="800">
-                    <p>Tworzę nowoczesne strony internetowe, które są solidne, czytelne i proste w obsłudze. Dbam o to,
-                        aby były przyjemne dla użytkowników i świetnie wyglądały na każdym urządzeniu — od telefonu po
-                        komputer.</p>
-                    <div class="banner-links-container">
-                        <a href="#contact-section">Skontaktuj się</a>
-                        <a href="#projects-section">Projekty</a>
+
+                <div class="about-wrapper grid-2 fade-up">
+                    <!-- Expanded Image Area -->
+                    <div class="about-image-col">
+                        <!-- Placeholder for User's image -->
+                        <img src="assets/test.png" alt="Moje zdjęcie" class="profile-img">
+
+                        <!-- Floating Badge -->
+
+                    </div>
+
+                    <!-- Expanded Text Area -->
+                    <div class="about-content">
+                        <h3 class="about-headline">Cześć! Zamieniam wizje biznesowe w rewelacyjne produkty cyfrowe.</h3>
+                        <div class="about-text-blocks">
+                            <p>Jestem programistą Front-End z dużą pasją do estetyki i bezkompromisowej wydajności.
+                                Każdego dnia stawiam czoła wyzwaniom technologicznym, tworząc zoptymalizowane pod kątem
+                                SEO i UX aplikacje webowe.</p>
+                            <p>Proces twórczy traktuję kompleksowo. Od rozplanowania architektury po najmniejsze
+                                mikro-interakcje. Lubię kod, który nie tylko <strong>działa niezawodnie</strong>, ale
+                                jest czysty, łatwy w utrzymaniu i skalowaniu.</p>
+                            <p>Stale się rozwijam, a po godzinach chętnie eksperymentuję z nowymi bibliotekami i badam
+                                nowoczesne podejścia do budowy stron (Server-Side Rendering, Static Site Generation).
+                            </p>
+                        </div>
+
+                        <div class="about-tech">
+                            <h4 class="subsection-title">Mój Core Tech Stack</h4>
+                            <div class="tech-badges">
+                                <span class="badge"><i class="fa-brands fa-react"></i> React</span>
+                                <span class="badge"><i class="fa-brands fa-js"></i> Next.js</span>
+                                <span class="badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+                                <span class="badge"><i class="fa-solid fa-code"></i> TypeScript</span>
+                                <span class="badge"><i class="fa-solid fa-wind"></i> Tailwind CSS</span>
+                                <span class="badge"><i class="fa-solid fa-database"></i> Redux Toolkit</span>
+                                <span class="badge"><i class="fa-solid fa-wifi"></i> TanStack Query</span>
+                                <span class="badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Framer Motion</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-    </div>
 
-    <section id="about-section">
-        <div class="container">
-            <div class="about-content-wrapper">
-                <div class="left-about" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
-                    <div class="image-wrapper">
-                        <img src="assets/images/about.webp" alt="Bartosz Kutnik - Frontend Developer" loading="lazy">
-                        <div class="experience-badge" data-aos="zoom-in" data-aos-delay="800">
-                            <span class="years">4+</span>
-                            <span class="text">Lata<br>Doświadczenia</span>
-                        </div>
-                    </div>
+        <!-- Services Section -->
+        <section id="services" class="services section-padding bg-alt">
+            <div class="container">
+                <div class="section-heading text-center fade-up">
+                    <h2 class="section-title">Technologie & <span class="text-gradient">Usługi</span></h2>
+                    <div class="heading-line center-line"></div>
+                    <p class="section-subtitle">Wybierz rozwiązanie programistyczne idealnie dopasowane do Twoich
+                        potrzeb biznesowych.</p>
                 </div>
-                <div class="right-about">
-                    <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="pill-tag">poznaj mnie</div>
-                        <h2 class="section-heading">O mnie</h2>
+                <div class="services-premium-grid">
+                    <!-- Service 1 -->
+                    <div class="service-premium-card fade-up">
+                        <div class="sp-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3 class="sp-title">Strony Wizytówki & Landing Page</h3>
+                        <p class="sp-desc">Błyskawiczne, opłacalne w hostingu stacjonarne strony internetowe. Skupione
+                            na perfekcyjnych wynikach w Google Lighthouse oraz budowaniu wizerunku marki.</p>
                     </div>
 
-                    <div class="description-about" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <p>Nazywam się Bartosz Kutnik i jestem pasjonatem technologii webowych. Tworzę
-                            <span class="highlight">nowoczesne, profesjonalne strony internetowe</span>, które łączą
-                            estetykę z funkcjonalnością.
-                            Moim celem jest dostarczanie rozwiązań, które nie tylko świetnie wyglądają, ale również
-                            realizują cele biznesowe klientów.
-                            Jako technik programista, dbam o każdy detal kodu, zapewniając wydajność i skalowalność.
-                        </p>
-                    </div>
-                    <div class="stats-grid" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                        <div class="stat-card">
-                            <div class="icon"><i class="fa-solid fa-check-double"></i></div>
-                            <div class="stat-info">
-                                <h3>20+</h3>
-                                <p>Ukończone projekty</p>
-                            </div>
+                    <!-- Service 2 -->
+                    <div class="service-premium-card fade-up delay-1">
+                        <div class="sp-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
                         </div>
-                        <div class="stat-card">
-                            <div class="icon"><i class="fa-solid fa-face-smile"></i></div>
-                            <div class="stat-info">
-                                <h3>100%</h3>
-                                <p>Zadowolonych klientów</p>
-                            </div>
-                        </div>
+                        <h3 class="sp-title">Sklepy Internetowe (E-commerce)</h3>
+                        <p class="sp-desc">Dedykowane platformy e-commerce zintegrowane ze Stripe oraz Przelewy24.
+                            Projektowane od podstaw z naciskiem na user experience i maksymalizację konwersji.</p>
                     </div>
 
-                    <div class="skills-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                        <h3 class="skills-heading">Technologie, z którymi pracuję:</h3>
-                        <div class="skills-grid">
-                            <div class="skill-pill"><i class="fa-brands fa-html5"></i> HTML5</div>
-                            <div class="skill-pill"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
-                            <div class="skill-pill"><i class="fa-brands fa-js"></i> JavaScript</div>
-                            <div class="skill-pill"><i class="fa-brands fa-github"></i> Git & GitHub</div>
-                            <div class="skill-pill"><i class="fa-solid fa-database"></i> SQL</div>
+                    <!-- Service 3 -->
+                    <div class="service-premium-card fade-up delay-2">
+                        <div class="sp-icon">
+                            <i class="fa-solid fa-bolt"></i>
                         </div>
+                        <h3 class="sp-title">Audyt SEO & Optymalizacja</h3>
+                        <p class="sp-desc">Zadbaj o pozycję w organicznych wynikach wyszukiwania. Mitygacja błędów
+                            technicznych, wdrażanie standardów Core Web Vitals i audyty wąskich gardeł.</p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-premium-card fade-up delay-3">
+                        <div class="sp-icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3 class="sp-title">Dedykowane Aplikacje Webowe</h3>
+                        <p class="sp-desc">Złożone aplikacje SPA oparte o środowisko React. Systemy zarządzania
+                            biznesem, panele B2B lub innowacyjne aplikacje realizujące skomplikowane procesy.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="services-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
-                <div class="pill-tag">Co zyskujesz wybierając mnie</div>
-                <h2 class="section-heading">Korzyści</h2>
-            </div>
-            <div class="services">
-                <div class="fade-up" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                    <div class="serv">
-                        <div class="icon-box">
-                            <i class="fa-solid fa-object-group"></i>
-                        </div>
-                        <h4>Wygląd i wygoda użytkowania</h4>
-                        <p>Projektuję przejrzyste i estetyczne interfejsy, które są intuicyjne i przyjemne w obsłudze –
-                            tak, aby użytkownik chętnie został na stronie.</p>
-                    </div>
-                </div>
-                <div class="fade-up" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="serv">
-                        <div class="icon-box">
-                            <i class="fa-solid fa-mobile-screen-button"></i>
-                        </div>
-                        <h4>Dostosowanie do każdego urządzenia</h4>
-                        <p>Twoja witryna będzie wyglądać perfekcyjnie na każdym urządzeniu – od smartfona po duży
-                            monitor.</p>
-                    </div>
-                </div>
-                <div class="fade-up" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                    <div class="serv">
-                        <div class="icon-box">
-                            <i class="fa-solid fa-magnifying-glass-chart"></i>
-                        </div>
-                        <h4>Widoczność w Google i szybkość strony</h4>
-                        <p>Zadbaj o widoczność w Google. Optymalizuję kod i treści, aby Twoja strona ładowała się
-                            błyskawicznie i była łatwa do znalezienia.</p>
-                    </div>
-                </div>
-                <div class="fade-up" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                    <div class="serv">
-                        <div class="icon-box">
-                            <i class="fa-solid fa-shield-halved"></i>
-                        </div>
-                        <h4>Bezpieczeństwo</h4>
-                        <p>Wdrażam sprawdzone zabezpieczenia, certyfikaty SSL i ochronę przed atakami, byś mógł spać
-                            spokojnie.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
-                <div class="pill-tag">Wykonane projekty</div>
-                <h2 class="section-heading">Projekty</h2>
-            </div>
-            <div class="projects-container">
-                <a href="https://unrestt.github.io/Salon_Kosmetyczny/" target="_blank" class="project"
-                    data-aos="fade-up" data-aos-delay="100">
-                    <div class="img-container">
-                        <img src="assets/images/realizacje_img/salonkosmetyczny_image.png"
-                            alt="Realizacja strony dla salonu kosmetycznego" loading="lazy">
-                    </div>
-                    <div class="project-info">
-                        <h3>Salon kosmetyczny</h3>
-                        <p>Strona wizytówka</p>
-                        <div class="arrow-icon"><i class="fa-solid fa-arrow-right"></i></div>
-                    </div>
-                </a>
-
-                <a href="https://unrestt.github.io/Fryzjer_Barber/" target="_blank" class="project" data-aos="fade-up"
-                    data-aos-delay="200">
-                    <div class="img-container">
-                        <img src="assets/images/realizacje_img/barbershop_image.png"
-                            alt="Realizacja strony dla BarberShop" loading="lazy">
-                    </div>
-                    <div class="project-info">
-                        <h3>BarberShop</h3>
-                        <p>Strona wizytówka</p>
-                        <div class="arrow-icon"><i class="fa-solid fa-arrow-right"></i></div>
-                    </div>
-                </a>
-                <a href="https://unrestt.github.io/Agent_Nieruchomosci/" target="_blank" class="project"
-                    data-aos="fade-up" data-aos-delay="500">
-                    <div class="img-container">
-                        <img src="assets/images/realizacje_img/agentnieruchomosci_image.png"
-                            alt="Projekt strony dla Agenta Nieruchomości" loading="lazy">
-                    </div>
-                    <div class="project-info">
-                        <h3>Agent Nieruchomości</h3>
-                        <p>Strona wizytówka</p>
-                        <div class="arrow-icon"><i class="fa-solid fa-arrow-right"></i></div>
-                    </div>
-                </a>
-                <a href="https://unrestt.github.io/tattoo_website/" target="_blank" class="project" data-aos="fade-up"
-                    data-aos-delay="500">
-                    <div class="img-container">
-                        <img src="assets/images/realizacje_img/tatuaz_image.png" alt="Projekt strony dla Studia Tatuażu"
-                            loading="lazy">
-                    </div>
-                    <div class="project-info">
-                        <h3>Tatuażysta</h3>
-                        <p>Strona wizytówka</p>
-                        <div class="arrow-icon"><i class="fa-solid fa-arrow-right"></i></div>
-                    </div>
-                </a>
-                <a href="https://unrestt.github.io/Trener_Personalny/" target="_blank" class="project"
-                    data-aos="fade-up" data-aos-delay="500">
-                    <div class="img-container">
-                        <img src="assets/images/realizacje_img/trenerpersonalny_image.png"
-                            alt="Realizacja strony dla Trenera Personalnego" loading="lazy">
-                    </div>
-                    <div class="project-info">
-                        <h3>Trener personalny</h3>
-                        <p>Strona wizytówka</p>
-                        <div class="arrow-icon"><i class="fa-solid fa-arrow-right"></i></div>
-                    </div>
-                </a>
-                <a href="https://unrestt.github.io/Course-webiste-ZdamINF03-/" target="_blank" class="project"
-                    data-aos="fade-up" data-aos-delay="500">
-                    <div class="img-container">
-                        <img src="assets/images/realizacje_img/kurs_image.png" alt="Platforma edukacyjna Kurs INF.03"
-                            loading="lazy">
-                    </div>
-                    <div class="project-info">
-                        <h3>Kurs ZdamINF.03</h3>
-                        <p>Platforma edukacyjna</p>
-                        <div class="arrow-icon"><i class="fa-solid fa-arrow-right"></i></div>
-                    </div>
-                </a>
-
-                <a href="https://unrestt.github.io/Hodowla_Little_Angels/" target="_blank" class="project"
-                    data-aos="fade-up" data-aos-delay="600">
-                    <div class="img-container">
-                        <img src="assets/images/realizacje_img/hodowlapsow_image.png"
-                            alt="Projekt strony dla Hodowli Psów" loading="lazy">
-                    </div>
-                    <div class="project-info">
-                        <h3>Hodowla Psów</h3>
-                        <p>Strona hodowlana</p>
-                        <div class="arrow-icon"><i class="fa-solid fa-arrow-right"></i></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
-                <div class="pill-tag">Co mówią moi klienci</div>
-                <h2 class="section-heading">Opinie</h2>
-            </div>
-
-            <div class="swiper testimonials-swiper" data-aos="fade-up" data-aos-delay="200">
-                <div class="swiper-wrapper">
-                    <!-- Statyczna opinia 1 -->
-                    <div class="swiper-slide">
-                        <div class="testimonial-card">
-                            <i class="fa-solid fa-quote-right quote-icon"></i>
-                            <div class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="testimonial-content">
-                                <p>"Współpraca z Bartkiem to czysta przyjemność. Strona, którą dla nas stworzył,
-                                    przewyższyła nasze oczekiwania – jest nowoczesna, szybka i bardzo intuicyjna."</p>
-                            </div>
-                            <div class="client-info">
-                                <div class="client-img">
-                                    <img src="https://ui-avatars.com/api/?name=Anna+Kowalska&background=b648f5&color=fff"
-                                        alt="Anna">
-                                </div>
-                                <div class="client-details">
-                                    <h4>Anna</h4>
-                                    <span>Przedsiębiorca</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Statyczna opinia 2 -->
-                    <div class="swiper-slide">
-                        <div class="testimonial-card">
-                            <i class="fa-solid fa-quote-right quote-icon"></i>
-                            <div class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="testimonial-content">
-                                <p>"Pełen profesjonalizm i świetny kontakt. Bartosz doskonale zrozumiał nasze potrzeby
-                                    biznesowe i przełożył je na funkcjonalny projekt strony."</p>
-                            </div>
-                            <div class="client-info">
-                                <div class="client-img">
-                                    <img src="https://ui-avatars.com/api/?name=Piotr+Zieliński&background=b648f5&color=fff"
-                                        alt="Piotr">
-                                </div>
-                                <div class="client-details">
-                                    <h4>Piotr</h4>
-                                    <span>Przedsiębiorca</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Statyczna opinia 3 -->
-                    <div class="swiper-slide">
-                        <div class="testimonial-card">
-                            <i class="fa-solid fa-quote-right quote-icon"></i>
-                            <div class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-stroke"></i>
-                            </div>
-                            <div class="testimonial-content">
-                                <p>"Polecam każdemu, kto szuka nowoczesnych rozwiązań. Strona działa błyskawicznie na
-                                    telefonach, co było dla nas kluczowe."</p>
-                            </div>
-                            <div class="client-info">
-                                <div class="client-img">
-                                    <img src="https://ui-avatars.com/api/?name=Marek+Nowak&background=b648f5&color=fff"
-                                        alt="Marek">
-                                </div>
-                                <div class="client-details">
-                                    <h4>Marek</h4>
-                                    <span>Przedsiębiorca</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
-                <div class="pill-tag">Skontaktuj się ze mną</div>
-                <h2 class="section-heading">Kontakt</h2>
-            </div>
-
-            <div class="contact-grid">
-                <!-- LEFT: Info panel -->
-                <div class="contact-info-panel" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
-                    <div class="contact-intro">
-                        <h3>Porozmawiajmy o&nbsp;Twoim projekcie</h3>
-                        <p>Chętnie omówię szczegóły i odpowiem na wszystkie pytania. Napisz lub zadzwoń — jestem do
-                            dyspozycji!</p>
-                    </div>
-
-                    <a href="mailto:kutnik.contact@gmail.com" class="contact-card">
-                        <div class="contact-card-icon">
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-                        <div class="contact-card-text">
-                            <p>E-mail</p>
-                            <span>kutnik.contact@gmail.com</span>
-                        </div>
-                    </a>
-
-                    <a href="tel:+48535779011" class="contact-card">
-                        <div class="contact-card-icon">
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
-                        <div class="contact-card-text">
-                            <p>Telefon</p>
-                            <span>(+48) 535 779 011</span>
-                        </div>
-                    </a>
-
-                    <div class="contact-card" style="cursor:default;">
-                        <div class="contact-card-icon">
-                            <i class="fa-solid fa-clock"></i>
-                        </div>
-                        <div class="contact-card-text">
-                            <p>Czas odpowiedzi</p>
-                            <span>Zazwyczaj do 24h</span>
-                        </div>
-                    </div>
-
-                    <div class="contact-socials">
-                        <a href="https://www.facebook.com/bartek.kutnik.77/" target="_blank" class="social-btn"
-                            aria-label="Facebook">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="https://github.com/Unrestt" target="_blank" class="social-btn" aria-label="GitHub">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="mailto:kutnik.contact@gmail.com" class="social-btn" aria-label="Email">
-                            <i class="fa-solid fa-envelope"></i>
-                        </a>
-                    </div>
+        <!-- Process Section -->
+        <section id="process" class="process section-padding bg-alt">
+            <div class="container">
+                <div class="section-heading text-center fade-up">
+                    <h2 class="section-title">Jak Pracuję</h2>
+                    <div class="heading-line center-line"></div>
+                    <p class="section-subtitle">Poznaj mój sprawdzony proces realizacji od pustej kartki do wdrożenia na
+                        produkcję.</p>
                 </div>
 
-                <!-- RIGHT: Form card -->
-                <div class="contact-form-card" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
-                    <h3>Wyślij wiadomość</h3>
-                    <form method="POST" id="contactForm" novalidate>
-                        <input type="hidden" name="action" value="contact">
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="imie">Imię</label>
-                                <div class="input-wrapper">
-                                    <i class="fa-solid fa-user"></i>
-                                    <input type="text" placeholder="Twoje imię" name="imie" id="imie" required
-                                        minlength="2" maxlength="40" pattern="^[A-Za-zÀ-žżźćńółśąęŻŹĆĄŚĘŁÓŃ\s-]+$">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="nazwisko">Nazwisko</label>
-                                <div class="input-wrapper">
-                                    <i class="fa-solid fa-user"></i>
-                                    <input type="text" placeholder="Twoje nazwisko" name="nazwisko" id="nazwisko"
-                                        required minlength="2" maxlength="60"
-                                        pattern="^[A-Za-zÀ-žżźćńółśąęŻŹĆĄŚĘŁÓŃ\s-]+$">
-                                </div>
-                            </div>
+                <div class="process-horizontal fade-up">
+                    <div class="process-line-container">
+                        <div class="process-line"></div>
+                        <div class="process-steps">
+                            <div class="step-circle">01</div>
+                            <div class="step-circle">02</div>
+                            <div class="step-circle">03</div>
+                            <div class="step-circle">04</div>
                         </div>
+                    </div>
 
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">E-mail</label>
-                                <div class="input-wrapper">
-                                    <i class="fa-solid fa-envelope"></i>
-                                    <input type="email" placeholder="Twój e-mail" name="email" id="email" required
-                                        maxlength="100">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="tel">Telefon</label>
-                                <div class="input-wrapper">
-                                    <i class="fa-solid fa-phone"></i>
-                                    <input type="tel" placeholder="Twój numer" name="numer_tel" id="tel" required
-                                        pattern="^[0-9\-\+\s]{7,20}$">
-                                </div>
-                            </div>
+                    <div class="process-cards">
+                        <!-- Step 1 -->
+                        <div class="process-card text-center">
+                            <div class="mobile-step">01</div>
+                            <h3>Koncepcja i Strategia</h3>
+                            <p>Zaczynamy od rozmowy o Twoim pomysle. Zbieram wszystkie niezbędne informacje, aby
+                                zrozumieć cele biznesowe i wspólnie wypracować najlepszy kierunek działań.</p>
                         </div>
-
-                        <div class="form-group">
-                            <label for="wiadomosc">Wiadomość</label>
-                            <div class="textarea-group">
-                                <i class="fa-solid fa-comment"></i>
-                                <textarea placeholder="Opisz swój projekt lub zadaj pytanie..." name="wiadomosc"
-                                    id="wiadomosc" required minlength="10" maxlength="1000"></textarea>
-                            </div>
+                        <!-- Step 2 -->
+                        <div class="process-card text-center">
+                            <div class="mobile-step">02</div>
+                            <h3>Kreacja i Współpraca</h3>
+                            <p>Tworzę treści oraz warstwę wizualną, dbając o każdy detal. Cały proces opiera się na
+                                stałym kontakcie — na bieżąco konsultuję z Tobą wygląd i funkcjonalności, aby efekt w
+                                pełni Cię satysfakcjonował.</p>
                         </div>
-
-                        <label for="checkbox" class="contact-checkbox">
-                            <input type="checkbox" id="checkbox" required>
-                            <p>Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z
-                                <a href="polityka-prywatnosci.html">Polityką Prywatności</a>
+                        <!-- Step 3 -->
+                        <div class="process-card text-center">
+                            <div class="mobile-step">03</div>
+                            <h3>Wdrożenie i Bezpieczeństwo</h3>
+                            <p>Przenoszę gotowy projekt na serwer. Konfiguruję środowisko, dbam o certyfikaty
+                                bezpieczeństwa oraz optymalizację techniczną, aby strona działała szybko i stabilnie.
                             </p>
-                        </label>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="process-card text-center">
+                            <div class="mobile-step">04</div>
+                            <h3>Premiera i Wsparcie</h3>
+                            <p>Po uruchomieniu strony nie zostajesz sam. Zapewniam opiekę techniczną i wsparcie,
+                                pomagając Ci w obsłudze oraz dbając o to, by wszystko działało bez zarzutu.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                        <button type="submit" class="contact-submit-btn">
-                            <i class="fa-solid fa-paper-plane"></i>
-                            <span>Wyślij wiadomość</span>
-                        </button>
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio section-padding">
+            <div class="container">
+                <div class="section-heading fade-up">
+                    <h2 class="section-title">Moje Realizacje</h2>
+                    <div class="heading-line"></div>
+                </div>
+                <div class="portfolio-grid fade-up">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="assets/screenshots/agent_nieruchomosci.webp" alt="Strona Agenta Nieruchomości"
+                                class="project-scrolling-img" decoding="async">
+                        </div>
+                        <div class="project-info">
+                            <h3>Strona Agenta Nieruchomości</h3>
+                            <p>W pełni responsywna, konwertująca strona typu One-Page z interaktywnymi sekcjami i
+                                płynnymi animacjami dla pośrednika nieruchomości.</p>
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="assets/screenshots/fryzjer_barber.webp" alt="Strona salonu Barber"
+                                class="project-scrolling-img" decoding="async">
+                        </div>
+                        <div class="project-info">
+                            <h3>Salon Fryzjerski / Barber</h3>
+                            <p>Nowoczesna strona wizytówka z mrocznym i eleganckim motywem. Zintegrowana z zewnętrznym
+                                systemem rezerwacji wizyt.</p>
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 5 -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="assets/screenshots/hodowla_psow.webp" alt="Hodowla psów"
+                                class="project-scrolling-img" decoding="async">
+                        </div>
+                        <div class="project-info">
+                            <h3>Profesjonalna Hodowla Psów</h3>
+                            <p>Szybka stacjonarna witryna z wyeksponowaną sekcją zdjęć szczeniaków, rodowodów i
+                                formularzem dla zainteresowanych licytacją.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Tailwind CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 6 -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="assets/screenshots/tattoo_website.webp" alt="Studio Tatuażu"
+                                class="project-scrolling-img" decoding="async">
+                        </div>
+                        <div class="project-info">
+                            <h3>Studio Tatuażu</h3>
+                            <p>Klimatyczna witryna oddająca charakter wykonawców. Zawiera zaawansowaną galerię tatuaży i
+                                płynne przejścia z użyciem Framer Motion.</p>
+                            <div class="project-tags">
+                                <span>Next.js</span>
+                                <span>Framer Motion</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 7 -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="assets/screenshots/trener_personalny.webp" alt="Trener Personalny"
+                                class="project-scrolling-img" decoding="async">
+                        </div>
+                        <div class="project-info">
+                            <h3>Trener Personalny VIP</h3>
+                            <p>Platforma wizerunkowa ze świetnym wynikiem SEO, pakietami programów dietetycznych i
+                                landing page promującym wyjazd szkoleniowy.</p>
+                            <div class="project-tags">
+                                <span>JavaScript</span>
+                                <span>Sass / SCSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding bg-alt">
+            <div class="container">
+                <div class="section-heading fade-up">
+                    <h2 class="section-title">Bądźmy W Kontakcie</h2>
+                    <div class="heading-line"></div>
+                </div>
+                <div class="contact-wrapper grid-2 fade-up">
+                    <div class="contact-info">
+                        <h3 class="contact-headline">Zbudujmy coś<br><span class="text-gradient">niesamowitego!</span>
+                        </h3>
+                        <p class="contact-desc">Jeśli masz interesujący projekt, z którym potrzebujesz pomocy lub po
+                            prostu chcesz porozmawiać o możliwościach współpracy - napisz śmiało. Obecnie jestem wolny
+                            na nowe wyzwania.</p>
+
+                        <div class="contact-social-pills">
+                            <a href="mailto:kutnik.contact@gmail.com" class="social-pill"
+                                aria-label="Wyślij e-mail do Bartosz Kutnik">
+                                <i class="fa-solid fa-envelope"></i> kutnik.contact@gmail.com
+                            </a>
+                            <a href="https://www.linkedin.com/in/bartosz-kutnik-820a45335/" class="social-pill"
+                                target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn Bartosz Kutnik">
+                                <i class="fa-brands fa-linkedin"></i> LinkedIn
+                            </a>
+                            <a href="https://github.com/unrestt" class="social-pill" target="_blank"
+                                rel="noopener noreferrer" aria-label="Profil GitHub Bartosz Kutnik">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <form id="contactForm" class="contact-form-modern" novalidate>
+                        <!-- Web3Forms Config -->
+                        <input type="hidden" name="access_key" value="0034fb5b-4fed-44d7-abe2-faae63fdbc1b">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <div class="form-row">
+                            <div class="form-group-modern">
+                                <label for="name">Imię i nazwisko</label>
+                                <input type="text" id="name" name="name" required placeholder="Jan Kowalski">
+                                <span class="error-msg">Proszę podać swoje imię.</span>
+                            </div>
+                            <div class="form-group-modern">
+                                <label for="email">Adres e-mail</label>
+                                <input type="email" id="email" name="email" required placeholder="jan@example.com">
+                                <span class="error-msg">Proszę podać prawidłowy e-mail.</span>
+                            </div>
+                        </div>
+                        <div class="form-group-modern">
+                            <label for="message">Twoja wiadomość</label>
+                            <textarea id="message" name="message" rows="4" required
+                                placeholder="Opowiedz mi więcej o swoim projekcie, celach i budżecie..."></textarea>
+                            <span class="error-msg">Wiadomość nie może być pusta.</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Wyślij Wiadomość <i
+                                class="fa-solid fa-paper-plane" style="margin-left: 8px;"></i></button>
+                        <div id="formStatus" class="form-status"></div>
                     </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <div class="footer-wrapper">
+            <div class="footer-grid">
+                <!-- Branding -->
                 <div class="footer-brand">
-                    <a href="#home" class="footer-logo">
-                        <img src="assets/images/white_logo.png" alt="Bartosz Kutnik Logo" loading="lazy">
-                    </a>
-                    <p class="brand-desc">
-                        Tworzę nowoczesne strony internetowe, które łączą estetykę z funkcjonalnością.
-                        Wspólnie zbudujmy Twoją obecność w sieci.
-                    </p>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/bartek.kutnik.77/" target="_blank" aria-label="Facebook"><i
-                                class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://github.com/Unrestt" target="_blank" aria-label="Github"><i
-                                class="fa-brands fa-github"></i></a>
-                        <a href="mailto:kutnik.contact@gmail.com" aria-label="Email"><i
-                                class="fa-solid fa-envelope"></i></a>
-                    </div>
+                    <a href="#hero" class="logo"><img src="assets/bklogo.png" alt="DevBartek Logo"
+                            class="brand-logo"></a>
+                    <p class="footer-desc">Tworzę niesamowicie szybkie, responsywne i świetnie wyglądające aplikacje
+                        webowe. Gotowy, by wynieść Twój biznes na wyższy poziom.</p>
                 </div>
 
-                <div class="footer-links-group">
-                    <h4>Menu</h4>
-                    <ul class="footer-nav">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about-section">O mnie</a></li>
-                        <li><a href="#services-section">Korzyści</a></li>
-                        <li><a href="#projects-section">Projekty</a></li>
-                        <li><a href="#contact-section">Kontakt</a></li>
+                <!-- Quick Links -->
+                <div class="footer-links-col">
+                    <h4>Nawigacja</h4>
+                    <ul>
+                        <li><a href="#about">O mnie</a></li>
+                        <li><a href="#services">Usługi</a></li>
+                        <li><a href="#process">Proces realizacji</a></li>
+                        <li><a href="#portfolio">Projekty</a></li>
                     </ul>
                 </div>
 
-                <div class="footer-contact-group">
+                <!-- Social & Contact -->
+                <div class="footer-links-col">
                     <h4>Kontakt</h4>
-                    <div class="contact-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <div>
-                            <p>Zadzwoń do mnie</p>
-                            <a href="tel:+48535779011">(+48) 535 779 011</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fa-solid fa-envelope"></i>
-                        <div>
-                            <p>Napisz wiadomość</p>
-                            <a href="mailto:kutnik.contact@gmail.com">kutnik.contact@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <div>
-                            <p>Prywatność</p>
-                            <a href="polityka-prywatnosci.html" target="_blank">Polityka prywatności</a>
-                        </div>
-                    </div>
+                    <ul>
+                        <li><a href="mailto:kutnik.contact@gmail.com">kutnik.contact@gmail.com</a></li>
+                        <li><a href="https://www.linkedin.com/in/bartosz-kutnik-820a45335/" target="_blank"
+                                rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://github.com/unrestt" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Bartosz Kutnik. Wszelkie prawa zastrzeżone.</p>
-                <p>Wykonane przez <a href="#home">Bartosz Kutnik</a></p>
+                <p>&copy; <span id="year"></span> Bartosz Kutnik. Wszelkie prawa zastrzeżone.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Polityka Prywatności</a>
+                </div>
             </div>
         </div>
     </footer>
-    <a href="#" class="to-top">
-        <i class="fa-solid fa-chevron-up"></i>
-    </a>
 
-    <script>
-        emailjs.init("NWlmtoki4rvVzw_PV");
-        document.querySelector("form").addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            if (!document.getElementById("checkbox").checked) {
-                alert("Musisz wyrazić zgodę na przetwarzanie danych osobowych.");
-                return;
-            }
-
-            emailjs.send("service_ey1xiin", "template_8gjmumc", {
-                imie: document.getElementById("imie").value,
-                nazwisko: document.getElementById("nazwisko").value,
-                email: document.getElementById("email").value,
-                numer_tel: document.getElementById("tel").value,
-                wiadomosc: document.querySelector("textarea").value,
-                time: new Date().toLocaleString()
-            })
-                .then(function (response) {
-                    alert("Wiadomość została wysłana!");
-                }, function (error) {
-                    alert("Wystąpił błąd przy wysyłaniu wiadomości.");
-                    console.error(error);
-                });
-        });
-    </script>
-    <script src="assets/js/project.js"></script>
-    <script src="assets/js/totop.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
-            spaceBetween: 40,
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 30,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 40,
-                },
-            },
-        });
-
-
-        const lightbox = GLightbox({
-            selector: '.glightbox'
-        });
-
-        var testimonialSwiper = new Swiper(".testimonials-swiper", {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            loop: true,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 30,
-                },
-                1100: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                },
-            },
-        });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            once: true
-        });
-    </script>
-    <!-- <script src="assets/js/banner-effect.js"></script> -->
-    <script src="assets/js/nav.js"></script>
-    <script src="assets/js/cookies.js"></script>
-
-    <!-- Cookie Banner Structure -->
-    <div id="cookie-banner" class="cookie-banner">
+    <!-- Cookie Consent Banner -->
+    <div id="cookieBanner" class="cookie-banner">
         <div class="cookie-content">
-            <div class="cookie-icon">
-                <i class="fas fa-cookie-bite"></i>
-            </div>
-            <div class="cookie-text">
-                <h4>Ciasteczka i Statystyki</h4>
-                <p>Używamy plików cookies, aby zrozumieć, jak korzystasz z naszej strony i poprawić Twoje doświadczenia.
-                    Dzięki Google Analytics widzimy proste statystyki odwiedzin. Więcej informacji znajdziesz w naszej
-                    <a href="polityka-prywatnosci.html">Polityce Prywatności</a>.
-                </p>
-            </div>
+            <h3><i class="fa-solid fa-cookie-bite"></i> Pliki Cookies</h3>
+            <p>Ta strona używa ciasteczek, aby zapewnić Ci najlepsze wrażenia. Dzięki nim możemy analizować ruch i
+                personalizować treści. Zobacz naszą <a href="privacy.html">Politykę Prywatności</a>.</p>
         </div>
-        <div class="cookie-buttons">
-            <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Odrzuć</button>
-            <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Akceptuj wszystko</button>
+        <div class="cookie-actions">
+            <button id="declineCookies" class="btn btn-secondary">Odrzuć</button>
+            <button id="acceptCookies" class="btn btn-primary glow-effect">Akceptuję wszystko</button>
         </div>
     </div>
+
+    <script src="script.js"></script>
+    <script src="assets/js/cookies.js"></script>
 </body>
 
 </html>
