@@ -307,6 +307,25 @@ p {
   object-fit: contain;
 }
 
+/* Beautiful Text-based Logo Styles */
+.logo-text {
+  font-family: 'Outfit', 'Inter', var(--font-primary);
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  text-transform: none;
+}
+
+.logo:hover .logo-text {
+  transform: scale(1.02);
+  opacity: 0.95;
+}
+
 .nav-links {
   display: none;
 }
@@ -1211,6 +1230,10 @@ section.contact {
   font-size: 1.7rem;
   display: inline-block;
   margin-bottom: 1rem;
+}
+
+.footer-brand .logo-text {
+  font-size: 1.65rem;
 }
 
 .footer-desc {
